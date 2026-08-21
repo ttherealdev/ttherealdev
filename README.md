@@ -116,7 +116,7 @@ School management system built for an Egyptian school — students, staff and gr
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ttherealdev&theme=github_dark" width="100%" alt="Profile summary">
 
-<img src="https://streak-stats.demolab.com?user=ttherealdev&theme=github-dark-blue&hide_border=true&border_radius=8&date_format=M%20j%5B%2C%20Y%5D&ring=FF7B35&fire=FF7B35&currStreakLabel=58A6FF" width="49%" alt="Streak stats"> <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ttherealdev&theme=github_dark" width="49%" alt="Most used languages">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ttherealdev&theme=github_dark" width="49%" alt="Languages by repository"> <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ttherealdev&theme=github_dark" width="49%" alt="Languages by commit">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=ttherealdev&bg_color=0d1117&color=e6edf3&line=FF7B35&point=58A6FF&area=true&area_color=FF7B35&hide_border=true&radius=8" width="100%" alt="Contribution activity graph">
 
