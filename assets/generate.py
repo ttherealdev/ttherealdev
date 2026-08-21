@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import os
+import xml.dom.minidom
+from xml.sax.saxutils import escape, quoteattr
 
 THEMES = {
     "dark": dict(
@@ -98,15 +100,18 @@ H = line_y(len(LOGO) - 1) + PAD                   # logo is the taller column
 def banner(t: dict) -> str:
     # xml:space="preserve" keeps the ascii art's leading spaces; the mono font
     # then does the column alignment for free.
+    # Everything user-supplied goes through escape(): an unescaped & or < is a
+    # hard XML parse error, and browsers drop the whole image rather than
+    # rendering it partially.
     logo = "\n      ".join(
         f'<text class="mono art" xml:space="preserve" x="{LOGO_X}" '
-        f'y="{LOGO_Y0 + i * STEP}">{line}</text>'
+        f'y="{LOGO_Y0 + i * STEP}">{escape(line)}</text>'
         for i, line in enumerate(LOGO)
     )
 
     info = "\n      ".join(
-        f'<text class="mono key" x="{KEY_X}" y="{y}">{k}</text>'
-        f'<text class="mono val" x="{VAL_X}" y="{y}">{v}</text>'
+        f'<text class="mono key" x="{KEY_X}" y="{y}">{escape(k)}</text>'
+        f'<text class="mono val" x="{VAL_X}" y="{y}">{escape(v)}</text>'
         for (k, v), y in ((r, ROW_Y0 + i * STEP) for i, r in enumerate(ROWS))
     )
 
@@ -117,9 +122,12 @@ def banner(t: dict) -> str:
     )
 
     label = f"{TITLE}: " + ", ".join(v for _, v in ROWS)
+    # Derived from ROWS so the accessible name can't drift out of sync with the
+    # rows the way a hardcoded job title does.
+    caption = f"Anas Mohamed, {dict(ROWS)['work']}"
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{label}">
-  <title>Anas Mohamed, full-stack engineer</title>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label={quoteattr(label)}>
+  <title>{escape(caption)}</title>
   <style>
     .mono  {{ font-family: {MONO}; font-size: {SIZE}px; }}
     .art   {{ fill: {t['arch']};  font-weight: 700; }}
@@ -136,7 +144,7 @@ def banner(t: dict) -> str:
       {logo}
   </g>
 
-  <text class="mono title" x="{KEY_X}" y="{TITLE_Y}">{TITLE}</text>
+  <text class="mono title" x="{KEY_X}" y="{TITLE_Y}">{escape(TITLE)}</text>
   <text class="mono sep" x="{KEY_X}" y="{SEP_Y}">{'─' * len(TITLE)}</text>
 
   <g>
@@ -194,14 +202,20 @@ def footer(t: dict) -> str:
 '''
 
 
+def write(path: str, svg: str) -> None:
+    # Parse before writing. A malformed SVG is not a partial render on GitHub,
+    # it is a broken-image icon, and that is easy to miss until it is live.
+    xml.dom.minidom.parseString(svg)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(svg)
+
+
 def main() -> None:
     out = "/home/anas/projects/readme/assets"
     os.makedirs(out, exist_ok=True)
     for name, t in THEMES.items():
-        with open(f"{out}/banner-{name}.svg", "w", encoding="utf-8") as f:
-            f.write(banner(t))
-        with open(f"{out}/footer-{name}.svg", "w", encoding="utf-8") as f:
-            f.write(footer(t))
+        write(f"{out}/banner-{name}.svg", banner(t))
+        write(f"{out}/footer-{name}.svg", footer(t))
     print("wrote:", sorted(os.listdir(out)))
 
 
