@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/banner-light.svg">
-  <img alt="Anas Mohamed — full-stack engineer" src="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/banner-dark.svg" width="100%">
+  <img alt="Anas Mohamed" src="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/banner-dark.svg" width="100%">
 </picture>
 
 <a href="https://anas-mohamed.vercel.app">
@@ -99,14 +99,6 @@ School management system built for an Egyptian school — students, staff and gr
 [**Live demo →**](https://gamal-abdelnasser.vercel.app)
 
 `TypeScript` `Next.js` `Postgres`
-
-</td>
-<td width="50%" valign="top">
-
-### ⚙️ [todo\_cli](https://github.com/ttherealdev/todo_cli)
-A todo manager that lives in the terminal, written in Rust because the terminal deserves nice things.
-
-`Rust` `CLI`
 
 </td>
 </tr>
