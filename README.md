@@ -12,7 +12,7 @@
 
 <br>
 
-<a href="https://anas-mohamed.vercel.app"><img src="https://img.shields.io/badge/Portfolio-anas--mohamed.vercel.app-FF7B35?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117" alt="Portfolio"></a> <a href="https://discord.com/users/555873880384995329"><img src="https://img.shields.io/badge/Discord-let's_talk-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=0d1117" alt="Discord"></a> <a href="https://github.com/ttherealdev?tab=followers"><img src="https://img.shields.io/github/followers/ttherealdev?style=for-the-badge&logo=github&logoColor=white&label=Followers&labelColor=0d1117&color=58A6FF" alt="Followers"></a> <img src="https://komarev.com/ghpvc/?username=ttherealdev&style=for-the-badge&label=Visitors&color=39D353&labelColor=0d1117" alt="Profile views">
+<a href="https://anas-mohamed.vercel.app"><img src="https://img.shields.io/badge/Portfolio-anas--mohamed.vercel.app-FF7B35?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117" alt="Portfolio"></a> <a href="https://discord.com/users/555873880384995329"><img src="https://img.shields.io/badge/Discord-let's_talk-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=0d1117" alt="Discord"></a> <a href="https://github.com/ttherealdev?tab=followers"> <img src="https://komarev.com/ghpvc/?username=ttherealdev&style=for-the-badge&label=Visitors&color=39D353&labelColor=0d1117" alt="Profile views">
 
 </div>
 
