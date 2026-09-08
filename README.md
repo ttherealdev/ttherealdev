@@ -7,7 +7,7 @@
 </picture>
 
 <a href="https://anas-mohamed.vercel.app">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=FF7B35&center=true&vCenter=true&width=560&height=45&lines=building+for+the+web%2C+shipping+on+Linux;TypeScript+by+day%2C+Rust+by+night;Next.js+%C2%B7+Node+%C2%B7+Postgres+%C2%B7+Prisma;always+one+more+refactor+away+from+done" alt="what I do" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=FF7B35&center=true&vCenter=true&width=560&height=45&lines=I+use+Arch%2C+btw;Linux+%C2%B7+Rust+%C2%B7+TypeScript;building+stuff+that+ships;sudo+pacman+-S+brain" alt="what I do" />
 </a>
 
 <br>
