@@ -24,14 +24,14 @@
 pub struct Anas;
 
 impl Developer for Anas {
-    const LOCATION: &'static str = "Fayoum, Egypt 🇪🇬";
-    const ROLE:     &'static str = "Full-stack engineer, freelance";
-    const DAILY:    &'static str = "Arch Linux + Neovim + too much coffee";
+    const LOCATION: &'static str = "Fayyum, Egypt 🇪🇬";
+    const ROLE:     &'static str = "Software Engineer";
+    const DAILY:    &'static str = "Arch Linux + Neovim + too much coffee haha";
 
     fn currently(&self) -> Focus {
         Focus {
             building:  "playercn — watch anything together, one link, zero signup",
-            learning:  "Rust, systems-level thinking, and cloud architecture",
+            learning:  "Rust, systems-level thinking",
             open_to:   "freelance work and collaboration on ambitious ideas",
         }
     }
