@@ -135,15 +135,3 @@ School management system built for an Egyptian school — students, staff and gr
 </picture>
 
 </div>
-
----
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/footer-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/footer-light.svg">
-  <img alt="" src="https://raw.githubusercontent.com/ttherealdev/ttherealdev/main/assets/footer-dark.svg" width="100%">
-</picture>
-
-</div>
